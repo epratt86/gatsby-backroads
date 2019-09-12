@@ -48,7 +48,9 @@ const Contact = () => {
           </div>
           <input type="hidden" name="bot-field" />
           <div>
-            <input type="submit" value="submit" className={styles.submit} />
+            <button type="submit" className={styles.submit}>
+              send
+            </button>
           </div>
         </form>
       </div>
