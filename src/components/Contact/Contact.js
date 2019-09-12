@@ -46,7 +46,7 @@ const Contact = () => {
               placeholder="Leave your message"
             />
           </div>
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="Contact Us" value="contact" />
           <div>
             <input type="submit" value="submit" className={styles.submit} />
           </div>
