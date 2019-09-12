@@ -8,11 +8,11 @@ const Contact = () => {
       <Title title="contact" subtitle="us" />
       <div className={styles.center}>
         <form
+          name="contact"
           className={styles.form}
+          method="post"
           data-netlify="true"
-          method="POST"
-          action="/success"
-          name="Contact Us"
+          data-netlify-honeypot="bot-field"
         >
           <div>
             <label htmlFor="name">name</label>
@@ -43,6 +43,8 @@ const Contact = () => {
               className={styles.formControl}
               placeholder="Leave your message"
             />
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
           </div>
           <div>
             <button type="submit" className={styles.submit}>
