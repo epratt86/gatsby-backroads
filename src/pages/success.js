@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import Banner from "../components/Banner"
 import styles from "../css/error.module.css"
 
-const error = () => {
+const success = () => {
   return (
     <Layout>
       <header className={styles.error}>
@@ -18,4 +18,4 @@ const error = () => {
   )
 }
 
-export default error
+export default success
