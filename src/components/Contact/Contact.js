@@ -1,6 +1,5 @@
 import React from "react"
 import Title from "../Title"
-
 import styles from "../../css/contact.module.css"
 
 const Contact = () => {
@@ -11,7 +10,6 @@ const Contact = () => {
         <form
           className={styles.form}
           data-netlify="true"
-          netlify-honeypot="bot-field"
           method="POST"
           action="/success"
           name="Contact Us"
@@ -46,7 +44,6 @@ const Contact = () => {
               placeholder="Leave your message"
             />
           </div>
-          <input type="hidden" name="bot-field" />
           <div>
             <button type="submit" className={styles.submit}>
               send
