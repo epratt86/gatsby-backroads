@@ -11,7 +11,7 @@ const Contact = () => {
         <form
           className={styles.form}
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
+          netlify-honeypot="bot-field"
           method="POST"
           action="/success"
           name="Contact Us"
@@ -46,7 +46,7 @@ const Contact = () => {
               placeholder="Leave your message"
             />
           </div>
-          <input type="hidden" name="Contact Us" value="contact" />
+          <input type="hidden" name="bot-field" />
           <div>
             <input type="submit" value="submit" className={styles.submit} />
           </div>
