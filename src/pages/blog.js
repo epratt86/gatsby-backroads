@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/Layout"
 
-const blog = () => {
-  return <Layout>Hello from blog page</Layout>
+const blog = props => {
+  return <Layout>Hello from blog</Layout>
 }
 
 export default blog
