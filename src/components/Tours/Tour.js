@@ -3,11 +3,27 @@ import Image from "gatsby-image"
 import styles from "../../css/tour.module.css"
 import { FaMap } from "react-icons/fa"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { useStaticQuery, graphql } from "gatsby"
+
+// query to grab default image incase none is provided in contentful
+const getDefault = graphql`
+  query {
+    file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
 
 const Tour = ({ tour }) => {
   const { name, price, country, days, slug, images } = tour
-
-  let mainImage = images[0].fluid
+  const defaultResponse = useStaticQuery(getDefault)
+  const img = defaultResponse.file.childImageSharp.fluid
+  // check if images is coming back from props, if not set main image as defaultResponse
+  let mainImage = images ? images[0].fluid : img
 
   return (
     <article className={styles.tour}>
