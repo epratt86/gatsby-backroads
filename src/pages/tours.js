@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
-import Tours from "../components/Tours/Tours"
+import AllTours from "../components/Tours/AllTours"
 import { graphql } from "gatsby"
 
 export default class tours extends Component {
@@ -9,7 +9,7 @@ export default class tours extends Component {
     return (
       <Layout>
         <StyledHero img={this.props.data.defaultBcg.childImageSharp.fluid} />
-        <Tours />
+        <AllTours />
       </Layout>
     )
   }

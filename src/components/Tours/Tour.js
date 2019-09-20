@@ -18,8 +18,8 @@ const getDefault = graphql`
   }
 `
 
-const Tour = ({ tour }) => {
-  const { name, price, country, days, slug, images } = tour
+const Tour = props => {
+  const { name, price, country, days, slug, images } = props.tour
   const defaultResponse = useStaticQuery(getDefault)
   const img = defaultResponse.file.childImageSharp.fluid
   // check if images is coming back from props, if not set main image as defaultResponse

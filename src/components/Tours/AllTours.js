@@ -24,9 +24,9 @@ const getTours = graphql`
   }
 `
 
-const Tours = () => {
+const AllTours = () => {
   const { allTours } = useStaticQuery(getTours)
   return <TourList tours={allTours} />
 }
 
-export default Tours
+export default AllTours

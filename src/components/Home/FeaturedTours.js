@@ -1,5 +1,5 @@
 import React from "react"
-import Tour from "../Tours/tour"
+import Tour from "../Tours/Tour"
 import { useStaticQuery, graphql } from "gatsby"
 import Title from "../Title"
 import styles from "../../css/items.module.css"
