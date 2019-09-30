@@ -1,5 +1,6 @@
 const path = require("path")
 
+// Creates pages programatically from contentful tours data
 exports.createPages = async function({ actions, graphql }) {
   const { data } = await graphql(`
     query {
