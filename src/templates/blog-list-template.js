@@ -6,6 +6,7 @@ import styles from "../css/blog.module.css"
 import BlogCard from "../components/Blog/BlogCard"
 import Title from "../components/Title"
 import StyledHero from "../components/StyledHero"
+import SEO from "../components/SEO"
 
 // blog page with pagination
 
@@ -22,6 +23,7 @@ const blogListTemplate = props => {
 
   return (
     <Layout>
+      <SEO title="Blogs" />
       <StyledHero img={data.blogBcg.childImageSharp.fluid} />
       <section className={styles.blog}>
         <Title title="latest" subtitle="posts" />
