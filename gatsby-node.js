@@ -11,15 +11,30 @@ exports.createPages = async function({ actions, graphql }) {
           }
         }
       }
+      posts: allContentfulPost {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
     }
   `)
   data.tours.edges.forEach(edge => {
-    const slug = edge.node.slug
     actions.createPage({
-      path: `tours/${slug}`,
+      path: `tours/${edge.node.slug}`,
       component: path.resolve("./src/templates/tour-template.js"),
       context: {
-        slug,
+        slug: edge.node.slug,
+      },
+    })
+  })
+  data.posts.edges.forEach(edge => {
+    actions.createPage({
+      path: `blog/${edge.node.slug}`,
+      component: path.resolve("./src/templates/blog-template.js"),
+      context: {
+        slug: edge.node.slug,
       },
     })
   })
