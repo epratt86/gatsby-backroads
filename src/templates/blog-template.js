@@ -5,6 +5,8 @@ import styles from "../css/single-blog.module.css"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
+// this template displays ALL BLOGS (no pagination)
+
 const blogTemplate = ({ data }) => {
   const {
     title,
@@ -20,7 +22,7 @@ const blogTemplate = ({ data }) => {
             <img
               width="400"
               src={node.data.target.fields.file["en-US"].url}
-              alt="contentful image"
+              alt="contentful"
             />
           </div>
         )

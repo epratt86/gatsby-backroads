@@ -7,6 +7,7 @@ import Services from "../components/Home/Services"
 import StyledHero from "../components/StyledHero"
 import FeaturedTours from "../components/Home/FeaturedTours"
 import { graphql } from "gatsby"
+import BlogListTemplate from "../templates/blog-list-template"
 
 export default ({ data }) => (
   <Layout>
